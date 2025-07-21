@@ -26,16 +26,79 @@ if ($_FILES['image']['name']!='') {
 	$sql1 = "update classes set image='$image' where sl_id='$sl_id'";
 	$res=mysqli_query($conn,$sql1);
 }
-// ========== CLASS A ==========
-if ($_FILES['class_a_audio']['name'] != '') {
-    $tempFile = $_FILES['class_a_audio']['tmp_name'];
-    $targetPath = '../uploads/classes/class_audio/';
-    $ext = pathinfo($_FILES['class_a_audio']['name'], PATHINFO_EXTENSION);
-    $file_name = 'class_a_audio' . date('ymdhis') . '.' . $ext;
+// ========== SAMPLE A AUDIO ==========
+if ($_FILES['sample_a_audio']['name'] != '') {
+    $tempFile = $_FILES['sample_a_audio']['tmp_name'];
+    $targetPath = '../uploads/classes/sample_audio/';
+    $ext = pathinfo($_FILES['sample_a_audio']['name'], PATHINFO_EXTENSION);
+    $file_name = 'sample_a_audio' . date('ymdhis') . '.' . $ext;
     $targetFile = $targetPath . $file_name;
     move_uploaded_file($tempFile, $targetFile);
-    $class_a_audio = $file_name;
-    $sql1 = "UPDATE classes SET class_a_audio='$class_a_audio' WHERE sl_id='$sl_id'";
+    $sample_a_audio = $file_name;
+    $sql1 = "UPDATE classes SET sample_a_audio='$sample_a_audio' WHERE sl_id='$sl_id'";
+    $res = mysqli_query($conn, $sql1);
+}
+
+// ========== SAMPLE B AUDIO ==========
+if ($_FILES['sample_b_audio']['name'] != '') {
+    $tempFile = $_FILES['sample_b_audio']['tmp_name'];
+    $targetPath = '../uploads/classes/sample_audio/';
+    $ext = pathinfo($_FILES['sample_b_audio']['name'], PATHINFO_EXTENSION);
+    $file_name = 'sample_b_audio' . date('ymdhis') . '.' . $ext;
+    $targetFile = $targetPath . $file_name;
+    move_uploaded_file($tempFile, $targetFile);
+    $sample_b_audio = $file_name;
+    $sql1 = "UPDATE classes SET sample_b_audio='$sample_b_audio' WHERE sl_id='$sl_id'";
+    $res = mysqli_query($conn, $sql1);
+}
+
+// ========== SAMPLE C AUDIO ==========
+if ($_FILES['sample_c_audio']['name'] != '') {
+    $tempFile = $_FILES['sample_c_audio']['tmp_name'];
+    $targetPath = '../uploads/classes/sample_audio/';
+    $ext = pathinfo($_FILES['sample_c_audio']['name'], PATHINFO_EXTENSION);
+    $file_name = 'sample_c_audio' . date('ymdhis') . '.' . $ext;
+    $targetFile = $targetPath . $file_name;
+    move_uploaded_file($tempFile, $targetFile);
+    $sample_c_audio = $file_name;
+    $sql1 = "UPDATE classes SET sample_c_audio='$sample_c_audio' WHERE sl_id='$sl_id'";
+    $res = mysqli_query($conn, $sql1);
+}
+
+// ========== SAMPLE D AUDIO ==========
+if ($_FILES['sample_d_audio']['name'] != '') {
+    $tempFile = $_FILES['sample_d_audio']['tmp_name'];
+    $targetPath = '../uploads/classes/sample_audio/';
+    $ext = pathinfo($_FILES['sample_d_audio']['name'], PATHINFO_EXTENSION);
+    $file_name = 'sample_d_audio' . date('ymdhis') . '.' . $ext;
+    $targetFile = $targetPath . $file_name;
+    move_uploaded_file($tempFile, $targetFile);
+    $sample_d_audio = $file_name;
+    $sql1 = "UPDATE classes SET sample_d_audio='$sample_d_audio' WHERE sl_id='$sl_id'";
+    $res = mysqli_query($conn, $sql1);
+}
+// ========== CLASS A ==========
+if ($_FILES['class_a1_audio']['name'] != '') {
+    $tempFile = $_FILES['class_a1_audio']['tmp_name'];
+    $targetPath = '../uploads/classes/class_audio/';
+    $ext = pathinfo($_FILES['class_a1_audio']['name'], PATHINFO_EXTENSION);
+    $file_name = 'class_a1_audio' . date('ymdhis') . '.' . $ext;
+    $targetFile = $targetPath . $file_name;
+    move_uploaded_file($tempFile, $targetFile);
+    $class_a1_audio = $file_name;
+    $sql1 = "UPDATE classes SET class_a1_audio='$class_a1_audio' WHERE sl_id='$sl_id'";
+    $res = mysqli_query($conn, $sql1);
+}
+
+if ($_FILES['class_a2_audio']['name'] != '') {
+    $tempFile = $_FILES['class_a2_audio']['tmp_name'];
+    $targetPath = '../uploads/classes/class_audio/';
+    $ext = pathinfo($_FILES['class_a2_audio']['name'], PATHINFO_EXTENSION);
+    $file_name = 'class_a2_audio' . date('ymdhis') . '.' . $ext;
+    $targetFile = $targetPath . $file_name;
+    move_uploaded_file($tempFile, $targetFile);
+    $class_a2_audio = $file_name;
+    $sql1 = "UPDATE classes SET class_a2_audio='$class_a2_audio' WHERE sl_id='$sl_id'";
     $res = mysqli_query($conn, $sql1);
 }
 
@@ -52,15 +115,27 @@ if ($_FILES['class_a_pdf']['name'] != '') {
 }
 
 // ========== CLASS B ==========
-if ($_FILES['class_b_audio']['name'] != '') {
-    $tempFile = $_FILES['class_b_audio']['tmp_name'];
+if ($_FILES['class_b1_audio']['name'] != '') {
+    $tempFile = $_FILES['class_b1_audio']['tmp_name'];
     $targetPath = '../uploads/classes/class_audio/';
-    $ext = pathinfo($_FILES['class_b_audio']['name'], PATHINFO_EXTENSION);
-    $file_name = 'class_b_audio' . date('ymdhis') . '.' . $ext;
+    $ext = pathinfo($_FILES['class_b1_audio']['name'], PATHINFO_EXTENSION);
+    $file_name = 'class_b1_audio' . date('ymdhis') . '.' . $ext;
     $targetFile = $targetPath . $file_name;
     move_uploaded_file($tempFile, $targetFile);
-    $class_b_audio = $file_name;
-    $sql1 = "UPDATE classes SET class_b_audio='$class_b_audio' WHERE sl_id='$sl_id'";
+    $class_b1_audio = $file_name;
+    $sql1 = "UPDATE classes SET class_b1_audio='$class_b1_audio' WHERE sl_id='$sl_id'";
+    $res = mysqli_query($conn, $sql1);
+}
+
+if ($_FILES['class_b2_audio']['name'] != '') {
+    $tempFile = $_FILES['class_b2_audio']['tmp_name'];
+    $targetPath = '../uploads/classes/class_audio/';
+    $ext = pathinfo($_FILES['class_b2_audio']['name'], PATHINFO_EXTENSION);
+    $file_name = 'class_b2_audio' . date('ymdhis') . '.' . $ext;
+    $targetFile = $targetPath . $file_name;
+    move_uploaded_file($tempFile, $targetFile);
+    $class_b2_audio = $file_name;
+    $sql1 = "UPDATE classes SET class_b2_audio='$class_b2_audio' WHERE sl_id='$sl_id'";
     $res = mysqli_query($conn, $sql1);
 }
 
@@ -77,15 +152,27 @@ if ($_FILES['class_b_pdf']['name'] != '') {
 }
 
 // ========== CLASS C ==========
-if ($_FILES['class_c_audio']['name'] != '') {
-    $tempFile = $_FILES['class_c_audio']['tmp_name'];
+if ($_FILES['class_c1_audio']['name'] != '') {
+    $tempFile = $_FILES['class_c1_audio']['tmp_name'];
     $targetPath = '../uploads/classes/class_audio/';
-    $ext = pathinfo($_FILES['class_c_audio']['name'], PATHINFO_EXTENSION);
-    $file_name = 'class_c_audio' . date('ymdhis') . '.' . $ext;
+    $ext = pathinfo($_FILES['class_c1_audio']['name'], PATHINFO_EXTENSION);
+    $file_name = 'class_c1_audio' . date('ymdhis') . '.' . $ext;
     $targetFile = $targetPath . $file_name;
     move_uploaded_file($tempFile, $targetFile);
-    $class_c_audio = $file_name;
-    $sql1 = "UPDATE classes SET class_c_audio='$class_c_audio' WHERE sl_id='$sl_id'";
+    $class_c1_audio = $file_name;
+    $sql1 = "UPDATE classes SET class_c1_audio='$class_c1_audio' WHERE sl_id='$sl_id'";
+    $res = mysqli_query($conn, $sql1);
+}
+
+if ($_FILES['class_c2_audio']['name'] != '') {
+    $tempFile = $_FILES['class_c2_audio']['tmp_name'];
+    $targetPath = '../uploads/classes/class_audio/';
+    $ext = pathinfo($_FILES['class_c2_audio']['name'], PATHINFO_EXTENSION);
+    $file_name = 'class_c2_audio' . date('ymdhis') . '.' . $ext;
+    $targetFile = $targetPath . $file_name;
+    move_uploaded_file($tempFile, $targetFile);
+    $class_c2_audio = $file_name;
+    $sql1 = "UPDATE classes SET class_c2_audio='$class_c2_audio' WHERE sl_id='$sl_id'";
     $res = mysqli_query($conn, $sql1);
 }
 
@@ -102,15 +189,27 @@ if ($_FILES['class_c_pdf']['name'] != '') {
 }
 
 // ========== CLASS D ==========
-if ($_FILES['class_d_audio']['name'] != '') {
-    $tempFile = $_FILES['class_d_audio']['tmp_name'];
+if ($_FILES['class_d1_audio']['name'] != '') {
+    $tempFile = $_FILES['class_d1_audio']['tmp_name'];
     $targetPath = '../uploads/classes/class_audio/';
-    $ext = pathinfo($_FILES['class_d_audio']['name'], PATHINFO_EXTENSION);
-    $file_name = 'class_d_audio' . date('ymdhis') . '.' . $ext;
+    $ext = pathinfo($_FILES['class_d1_audio']['name'], PATHINFO_EXTENSION);
+    $file_name = 'class_d1_audio' . date('ymdhis') . '.' . $ext;
     $targetFile = $targetPath . $file_name;
     move_uploaded_file($tempFile, $targetFile);
-    $class_d_audio = $file_name;
-    $sql1 = "UPDATE classes SET class_d_audio='$class_d_audio' WHERE sl_id='$sl_id'";
+    $class_d1_audio = $file_name;
+    $sql1 = "UPDATE classes SET class_d1_audio='$class_d1_audio' WHERE sl_id='$sl_id'";
+    $res = mysqli_query($conn, $sql1);
+}
+
+if ($_FILES['class_d2_audio']['name'] != '') {
+    $tempFile = $_FILES['class_d2_audio']['tmp_name'];
+    $targetPath = '../uploads/classes/class_audio/';
+    $ext = pathinfo($_FILES['class_d2_audio']['name'], PATHINFO_EXTENSION);
+    $file_name = 'class_d2_audio' . date('ymdhis') . '.' . $ext;
+    $targetFile = $targetPath . $file_name;
+    move_uploaded_file($tempFile, $targetFile);
+    $class_d2_audio = $file_name;
+    $sql1 = "UPDATE classes SET class_d2_audio='$class_d2_audio' WHERE sl_id='$sl_id'";
     $res = mysqli_query($conn, $sql1);
 }
 

@@ -40,7 +40,7 @@ redir('register.php?msg=Phone Already Registered');
 else{
     //$password=md5($password);
       $time = date("Y-m-d h:i:sa");
-     $sql="insert into user (fname,lname,email,phone,password,valid,timestamp) values('$fname','$lname','$email','$phone','$password','1','$time')";
+     $sql="insert into user (fname,lname,email,phone,password,valid,timestamp,student) values('$fname','$lname','$email','$phone','$password','1','$time','0')";
     $res=mysqli_query($conn,$sql);
     if($res){
     $uid= lastId('user','sl_id');

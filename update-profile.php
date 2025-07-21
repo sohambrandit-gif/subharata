@@ -10,6 +10,7 @@ $lname=mysqli_real_escape_string($conn,$_POST['lname']);
 $email=mysqli_real_escape_string($conn,$_POST['email']);
 $phone=mysqli_real_escape_string($conn,$_POST['phone']);
 $state=mysqli_real_escape_string($conn,$_POST['state']);
+$country=mysqli_real_escape_string($conn,$_POST['country']);
 $city=mysqli_real_escape_string($conn,$_POST['city']);
 $landmark=mysqli_real_escape_string($conn,$_POST['landmark']);
 $address=mysqli_real_escape_string($conn,$_POST['address']);
@@ -29,7 +30,7 @@ redir("student-settings.php?msg=Please enter required information");
 // }
 else
 {
- echo $sql="update `user` set fname='$fname',lname='$lname',email='$email' ,phone='$phone' ,state='$state',city='$city',landmark='$landmark' ,address='$address' ,zip='$zip' ,password='$password' where sl_id=$uid";
+$sql="update `user` set fname='$fname',lname='$lname',email='$email' ,phone='$phone' ,state='$state',country='$country',city='$city',landmark='$landmark' ,address='$address' ,zip='$zip' ,password='$password' where sl_id=$uid";
  
 $res=mysqli_query($conn,$sql);
 if($res){

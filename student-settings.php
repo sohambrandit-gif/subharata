@@ -5,7 +5,7 @@
     <main>
         
         <!-- Start Student Settings Dashboard Area -->
-        <div class="bd-dashboard-area section-space-small-top section-space-bottom">
+        <div class="bd-dashboard-area section-space-top section-space-bottom">
             <div class="container">
                 <div class="bd-dashboard-main">
                     <div class="row gy-30">
@@ -21,20 +21,16 @@
                                                 Edit Profile
                                             </button>
                                             <ul class="dropdown-menu">
-                                                <li><a class="dropdown-item" href="student-settings.html">User
+                                                <li><a class="dropdown-item" href="student-settings.php">User
                                                         Settings</a>
                                                 </li>
-                                                <li><a class="dropdown-item" href="student-change-password.html">Change
+                                                <li><a class="dropdown-item" href="student-change-password.php">Change
                                                         Password</a></li>
-                                                <li><a class="dropdown-item" href="student-social-profile.html">Social
-                                                        Profile</a></li>
-                                                <li><a class="dropdown-item" href="student-upload-photo.html">Upload
-                                                        Photo</a></li>
                                             </ul>
                                         </div>
                                     </div>
                                 </div>
-                                <form class="dashboard-profile-info" method="POST" action="update_profile.php">
+                                <form class="dashboard-profile-info" method="POST" action="update-profile.php">
                                     <div class="dashboard-profile-inner">
                                         <div class="row gy-30">
                                             <div class="col-lg-6">
@@ -74,7 +70,12 @@
                                             </div>
                                             <div class="col-lg-6">
                                                 <div class="form-group">
-                                                    <input name="landmark" id="studentLandmark" type="text" placeholder="Your Landmark" value="<?php echo member_details($_SESSION['login'],'landmark'); ?>" required>
+                                                    <input name="state" id="studentLandmark" type="text" placeholder="State" value="<?php echo member_details($_SESSION['login'],'state'); ?>" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="form-group">
+                                                    <input name="country" id="studentCountry" type="text" placeholder="Country" value="<?php echo member_details($_SESSION['login'],'country'); ?>" required>
                                                 </div>
                                             </div>
                                             <div class="col-lg-12">

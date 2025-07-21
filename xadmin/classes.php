@@ -1,4 +1,4 @@
-<?php include 'header.php'; ?>
+<?php include 'header.php'; if(!isset($_SESSION['login']) || $_SESSION['login']== '' ){  redir('login.php');} ?>
 <!-- Datatables CSS -->
 <link rel="stylesheet" href="assets/plugins/datatables/datatables.min.css">
 <!-- Page Wrapper -->
@@ -149,19 +149,79 @@
               </div>
 			 </div>
        <div class="row">
-    <div class="col-md-4">
+        <div class="col-md-3">
+        <div class="form-group">
+            <label>Sample Audio A</label>
+            <input class="form-control" type="file" name="sample_a_audio">
+            <?php if($row['sample_a_audio'] != '') { ?>
+            <audio controls>
+                <source src="<?php echo '../uploads/classes/sample_audio/' . $row['sample_a_audio']; ?>" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <?php } ?>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="form-group">
+            <label>Sample Audio B</label>
+            <input class="form-control" type="file" name="sample_b_audio">
+            <?php if($row['sample_b_audio'] != '') { ?>
+            <audio controls>
+                <source src="<?php echo '../uploads/classes/sample_audio/' . $row['sample_b_audio']; ?>" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <?php } ?>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="form-group">
+            <label>Sample Audio C</label>
+            <input class="form-control" type="file" name="sample_c_audio">
+            <?php if($row['sample_c_audio'] != '') { ?>
+            <audio controls>
+                <source src="<?php echo '../uploads/classes/sample_audio/' . $row['sample_c_audio']; ?>" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <?php } ?>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="form-group">
+            <label>Sample Audio D</label>
+            <input class="form-control" type="file" name="sample_d_audio">
+            <?php if($row['sample_d_audio'] != '') { ?>
+            <audio controls>
+                <source src="<?php echo '../uploads/classes/sample_audio/' . $row['sample_d_audio']; ?>" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <?php } ?>
+        </div>
+    </div>
+    <div class="col-md-2">
         <div class="form-group">
             <label>Category</label>
             <input class="form-control" type="text" name="" value="A" readonly>
         </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-3">
         <div class="form-group">
-            <label>Class A Audio</label>
-            <input class="form-control" type="file" name="class_a_audio">
-            <?php if($row['class_a_audio'] != '') { ?>
+            <label>Class A Audio 1</label>
+            <input class="form-control" type="file" name="class_a1_audio">
+            <?php if($row['class_a1_audio'] != '') { ?>
             <audio controls>
-                <source src="<?php echo '../uploads/classes/class_audio/' . $row['class_a_audio']; ?>" type="audio/mpeg">
+                <source src="<?php echo '../uploads/classes/class_audio/' . $row['class_a1_audio']; ?>" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <?php } ?>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="form-group">
+            <label>Class A Audio 2</label>
+            <input class="form-control" type="file" name="class_a2_audio">
+            <?php if($row['class_a2_audio'] != '') { ?>
+            <audio controls>
+                <source src="<?php echo '../uploads/classes/class_audio/' . $row['class_a2_audio']; ?>" type="audio/mpeg">
                 Your browser does not support the audio element.
             </audio>
             <?php } ?>
@@ -177,19 +237,31 @@
         </div>
     </div>
     
-    <div class="col-md-4">
+    <div class="col-md-2">
         <div class="form-group">
             <label>Category</label>
             <input class="form-control" type="text" name="" value="B" readonly>
         </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-3">
         <div class="form-group">
-            <label>Class B Audio</label>
-            <input class="form-control" type="file" name="class_b_audio">
-            <?php if($row['class_b_audio'] != '') { ?>
+            <label>Class B Audio 1</label>
+            <input class="form-control" type="file" name="class_b1_audio">
+            <?php if($row['class_b1_audio'] != '') { ?>
             <audio controls>
-                <source src="<?php echo '../uploads/classes/class_audio/' . $row['class_b_audio']; ?>" type="audio/mpeg">
+                <source src="<?php echo '../uploads/classes/class_audio/' . $row['class_b1_audio']; ?>" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <?php } ?>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="form-group">
+            <label>Class B Audio 2</label>
+            <input class="form-control" type="file" name="class_b2_audio">
+            <?php if($row['class_b2_audio'] != '') { ?>
+            <audio controls>
+                <source src="<?php echo '../uploads/classes/class_audio/' . $row['class_b2_audio']; ?>" type="audio/mpeg">
                 Your browser does not support the audio element.
             </audio>
             <?php } ?>
@@ -205,19 +277,31 @@
         </div>
     </div>
     
-    <div class="col-md-4">
+    <div class="col-md-2">
         <div class="form-group">
             <label>Category</label>
             <input class="form-control" type="text" name="" value="C" readonly>
         </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-3">
         <div class="form-group">
-            <label>Class C Audio</label>
-            <input class="form-control" type="file" name="class_c_audio">
-            <?php if($row['class_c_audio'] != '') { ?>
+            <label>Class C Audio 1</label>
+            <input class="form-control" type="file" name="class_c1_audio">
+            <?php if($row['class_c1_audio'] != '') { ?>
             <audio controls>
-                <source src="<?php echo '../uploads/classes/class_audio/' . $row['class_c_audio']; ?>" type="audio/mpeg">
+                <source src="<?php echo '../uploads/classes/class_audio/' . $row['class_c1_audio']; ?>" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <?php } ?>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="form-group">
+            <label>Class C Audio 2</label>
+            <input class="form-control" type="file" name="class_c2_audio">
+            <?php if($row['class_c2_audio'] != '') { ?>
+            <audio controls>
+                <source src="<?php echo '../uploads/classes/class_audio/' . $row['class_c2_audio']; ?>" type="audio/mpeg">
                 Your browser does not support the audio element.
             </audio>
             <?php } ?>
@@ -233,19 +317,31 @@
         </div>
     </div>
     
-    <div class="col-md-4">
+    <div class="col-md-2">
         <div class="form-group">
             <label>Category</label>
             <input class="form-control" type="text" name="" value="D" readonly>
         </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-3">
         <div class="form-group">
-            <label>Class D Audio</label>
-            <input class="form-control" type="file" name="class_d_audio">
-            <?php if($row['class_d_audio'] != '') { ?>
+            <label>Class D Audio 1</label>
+            <input class="form-control" type="file" name="class_d1_audio">
+            <?php if($row['class_d1_audio'] != '') { ?>
             <audio controls>
-                <source src="<?php echo '../uploads/classes/class_audio/' . $row['class_d_audio']; ?>" type="audio/mpeg">
+                <source src="<?php echo '../uploads/classes/class_audio/' . $row['class_d1_audio']; ?>" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <?php } ?>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="form-group">
+            <label>Class D Audio 2</label>
+            <input class="form-control" type="file" name="class_d2_audio">
+            <?php if($row['class_d2_audio'] != '') { ?>
+            <audio controls>
+                <source src="<?php echo '../uploads/classes/class_audio/' . $row['class_d2_audio']; ?>" type="audio/mpeg">
                 Your browser does not support the audio element.
             </audio>
             <?php } ?>

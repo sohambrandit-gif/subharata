@@ -10,8 +10,7 @@ unset($_SESSION['t_igst']);
 $phone=mysqli_real_escape_string($conn,$_POST['phone']);
 $email=mysqli_real_escape_string($conn,$_POST['email']);
 $password=mysqli_real_escape_string($conn,$_POST['password']);
-$remember=$_POST['remember'];
-$remember = ($_POST['remember']==1) ? $_POST['remember'] : '0';
+$remember = isset($_POST['remember']) ? '1' : '0';  // 1 if checked, 0 if unchecked
 if($email=="" || $password=="")
 {
 redir('login.php?msg=Please enter the required information');
@@ -26,6 +25,7 @@ else
     if($count > 0)
     {
         $_SESSION['login']=$row['sl_id'];
+        $_SESSION['student']=$row['student'];
         if (isset($_POST['remember']) && $_POST['remember'] == '1') {
             /*
              * Set Cookie from here for one hour

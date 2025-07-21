@@ -3,51 +3,51 @@
                                 <h6 class="bd-dashboard-menu-title mt-0">Welcome, <?php echo member_details($_SESSION['login'],'fname'); ?> <?php echo member_details($_SESSION['login'],'lname'); ?></h6>
                                 <ul>
                                     <li>
-                                        <a href="student-dashboard.html"><span><i class="fa-light fa-gauge-high"></i></span>Dashboard</a>
+                                        <a href="student-dashboard.php"><span><i class="fa-light fa-gauge-high"></i></span>Dashboard</a>
                                     </li>
                                     <li>
-                                        <a href="student-profile.html"><span><i class="fa-light fa-id-badge"></i></span>My Profile</a>
+                                        <a href="student-profile.php"><span><i class="fa-light fa-id-badge"></i></span>My Profile</a>
                                     </li>
                                     <li>
-                                        <a href="student-analytics.html"><span><i class="fa-light fa-chart-line"></i></span>Analytics</a>
+                                        <a href="student-analytics.php"><span><i class="fa-light fa-chart-line"></i></span>Analytics</a>
                                     </li>
                                     <li>
-                                        <a href="student-enrolled-courses.html"><span><i class="fa-light fa-book-reader"></i></span>Enrolled
+                                        <a href="student-enrolled-courses.php"><span><i class="fa-light fa-book-reader"></i></span>Enrolled
                                             Courses</a>
                                     </li>
                                     <li>
-                                        <a href="student-books.html"><span><i class="fa-light fa-book"></i></span>My Books</a>
+                                        <a href="student-books.php"><span><i class="fa-light fa-book"></i></span>My Books</a>
                                     </li>
                                     <li>
-                                        <a href="student-wishlist.html"><span><i class="fa-light fa-heart"></i></span>Wishlist</a>
+                                        <a href="student-wishlist.php"><span><i class="fa-light fa-heart"></i></span>Wishlist</a>
                                     </li>
                                     <li>
-                                        <a href="student-my-quiz-attempts.html"><span><i class="fa-light fa-file-lines"></i></span>My Quiz
+                                        <a href="student-my-quiz-attempts.php"><span><i class="fa-light fa-file-lines"></i></span>My Quiz
                                             Attempts</a>
                                     </li>
                                     <li>
-                                        <a href="student-assignments.html"><span><i class="fa-light fa-tasks"></i></span>Assignments</a>
+                                        <a href="student-assignments.php"><span><i class="fa-light fa-tasks"></i></span>Assignments</a>
                                     </li>
                                     <li>
-                                        <a href="student-reviews.html"><span><i class="fa-light fa-comment-dots"></i></span>Reviews</a>
+                                        <a href="student-reviews.php"><span><i class="fa-light fa-comment-dots"></i></span>Reviews</a>
                                     </li>
                                     <li>
-                                        <a href="student-purchase-history.html"><span><i class="fa-light fa-receipt"></i></span>Purchase History</a>
+                                        <a href="student-purchase-history.php"><span><i class="fa-light fa-receipt"></i></span>Purchase History</a>
                                     </li>
                                     <li>
-                                        <a href="student-announcements.html"><span><i class="fa-light fa-bullhorn"></i></span>Announcement</a>
+                                        <a href="student-announcements.php"><span><i class="fa-light fa-bullhorn"></i></span>Announcement</a>
                                     </li>
                                     <li>
-                                        <a href="student-certificate.html"><span><i class="fa-light fa-award"></i></span>My Achievement</a>
+                                        <a href="student-certificate.php"><span><i class="fa-light fa-award"></i></span>My Achievement</a>
                                     </li>
                                 </ul>
                                 <h6 class="bd-dashboard-menu-title">User</h6>
                                 <ul>
                                     <li>
-                                        <a href="student-settings.html"><span><i class="fa-light fa-sliders"></i></span>Settings</a>
+                                        <a href="student-settings.php"><span><i class="fa-light fa-sliders"></i></span>Settings</a>
                                     </li>
                                     <li>
-                                        <a href="index.html"><span><i class="fa-light fa-sign-out-alt"></i></span>Logout</a>
+                                        <a href="logout.php"><span><i class="fa-light fa-sign-out-alt"></i></span>Logout</a>
                                     </li>
                                 </ul>
                             </div>

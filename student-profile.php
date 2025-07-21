@@ -46,7 +46,7 @@
         <!-- dashboard breadcrumb end -->
 
         <!-- Start Profile Dashboard Area -->
-        <div class="bd-dashboard-area section-space-small-top section-space-bottom">
+        <div class="bd-dashboard-area section-space-top section-space-bottom">
             <div class="container">
                 <div class="bd-dashboard-main">
                     <div class="row gy-30">
@@ -86,15 +86,28 @@
                                                 <td><?php echo member_details($_SESSION['login'],'phone'); ?></td>
                                             </tr>
                                             <tr>
-                                                <th>Occupation/Skill</th>
-                                                <td>Application Developer</td>
+                                                <th>Address</th>
+                                                <td><?php echo member_details($_SESSION['login'],'address'); ?></td>
                                             </tr>
                                             <tr>
-                                                <th>Biography</th>
-                                                <td>Hello! I'm Sarah A. Janney, a 24-year-old web developer and student
-                                                    with a passion for creating digital experiences. Currently pursuing
-                                                    a degree in web development at Hatharvard University, I am
-                                                    enthusiastic about all things web development.</td>
+                                                <th>City</th>
+                                                <td><?php echo member_details($_SESSION['login'],'city'); ?></td>
+                                            </tr>
+                                            <tr>
+                                                <th>Pin Code</th>
+                                                <td><?php echo member_details($_SESSION['login'],'zip'); ?></td>
+                                            </tr>
+                                            <tr>
+                                                <th>State</th>
+                                                <td><?php echo member_details($_SESSION['login'],'state'); ?></td>
+                                            </tr>
+                                            <tr>
+                                                <th>Country</th>
+                                                <td><?php echo member_details($_SESSION['login'],'country'); ?></td>
+                                            </tr>
+                                            <tr>
+                                                <th>Password</th>
+                                                <td><?php echo member_details($_SESSION['login'],'password'); ?></td>
                                             </tr>
                                         </tbody>
                                     </table>
