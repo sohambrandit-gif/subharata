@@ -15,7 +15,7 @@ $fmy_email = "-fhelpdesk@devapanam.com";
 //$support_phone = '917596024545';
 
 $host = 'localhost';
-$db = 'subhabrata';
+$db = 'abc';
 $user = 'root';
 $pass = '';
 

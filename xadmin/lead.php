@@ -40,7 +40,7 @@
                 <thead>
                   <tr>
                     <th>Name</th>
-                    <th>Code</th>
+                    <th>Is Student</th>
                     <th>Email</th>
                     <th>Phone</th>
                     <th>Password</th>
@@ -54,13 +54,13 @@
                 </thead>
                 <tbody>
                    <?php 
-        $sql12 = "SELECT * FROM user where valid=1 order by sl_id desc ";       
+        $sql12 = "SELECT * FROM user order by sl_id desc ";       
 				$res=mysqli_query($conn,$sql12);
 				while($row=mysqli_fetch_array($res)){
 				?>
                   <tr>
-                    <td><?php if( $row['influencer'] =='1'){ ?><i class="fe fe-user" style="color:green;"></i><?php } ?> <?php echo $row['fname']; ?> <?php echo $row['lname']; ?></td>
-                    <td><?php echo $row['referral_code']; ?></td>
+                    <td><?php echo $row['fname']; ?> <?php echo $row['lname']; ?></td>
+                    <td><?php echo ($row['student'] == 1) ? 'Yes' : 'No'; ?></td>
                     <td><?php echo $row['email']; ?></td>
                     <td><?php echo $row['phone']; ?></td>
                     <td><?php echo $row['password']; ?></td>
@@ -80,13 +80,11 @@
 						  <a class="dropdown-item" href="lead_del.php?id=<?php echo $row['sl_id']; ?>&action=Block" >Block</a>
 						  <?php } ?>
 						  <div class="dropdown-divider"></div>
-                          <?php if($row['influencer_verified']==0){ ?>
-                          <a class="dropdown-item" href="lead_del.php?id=<?php echo $row['sl_id']; ?>&action=Verified" > Verified</a>
+                          <?php if($row['student']==0){ ?>
+                          <a class="dropdown-item" href="lead_del.php?id=<?php echo $row['sl_id']; ?>&action=Verified" >Allow Access</a>
                           <?php } else { ?>
-                          <a class="dropdown-item" href="lead_del.php?id=<?php echo $row['sl_id']; ?>&action=Unverified" > Unverified</a>
+                          <a class="dropdown-item" href="lead_del.php?id=<?php echo $row['sl_id']; ?>&action=Unverified" > Restrict Access</a>
                           <?php } ?>
-                          <div class="dropdown-divider"></div>
-                           <a class="dropdown-item" href="influencer_order.php?referral_code=<?php echo $row['referral_code']; ?>" > Influencer order</a>
                       </div></td>
                   </tr>
                   <?php } ?>

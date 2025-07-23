@@ -66,7 +66,7 @@
             <div class="bd-header-inner">
                 <div class="bd-header-left">
                     <div class="bd-header-logo">
-                        <a href="index.html"><img src="assets/images/logo/logo.svg" alt="logo"></a>
+                        <a href="index.php"><img src="assets/images/logo/logo.svg" alt="logo"></a>
                     </div>
                     <div class="bd-header-category d-none d-lg-block">
                         <div class="bd-category-btn">
@@ -75,7 +75,7 @@
                         <div class="bd-category-dropdown">
                             <nav>
                                 <ul>
-                                    <li><a href="courses.html">Development</a></li>
+                                    <li><a href="student-section.php">Student Section</a></li>
                                     <li><a href="courses.html">Marketing</a></li>
                                     <li><a href="courses.html">Photography</a></li>
                                     <li><a href="courses.html">Life Style</a></li>
@@ -92,7 +92,7 @@
                     <nav class="main-menu bd-mobile-menu-active d-none d-xl-block">
                         <ul>
                             <li class="has-mega-menu">
-                                <a href="index.html">Home</a>
+                                <a href="index.php">Home</a>
                                 <ul class="mega-menu home-menu-grid">
                                     <li>
                                         <a href="index-online-course.html" class="home-menu-item">
@@ -465,7 +465,7 @@
                 <div class="bd-offcanvas-content">
                     <div class="bd-offcanvas-top d-flex justify-content-between align-items-center mb-30">
                         <div class="bd-offcanvas-logo">
-                            <a href="index.html">
+                            <a href="index.php">
                                 <img src="assets/images/logo/logo.svg" alt="logo not found">
                             </a>
                         </div>
