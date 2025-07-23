@@ -8,11 +8,6 @@ if($sl_id!='' && $action=='Active'){
 }else if($sl_id!='' && $action=='Regular'){
 	$sql1 = "update events set valid=0  where sl_id='$sl_id'";
 }
-if($sl_id!='' && $action=='Multiple'){
-	$sql1 = "update events set is_recurring=1  where sl_id='$sl_id'";
-}else if($sl_id!='' && $action=='Single'){
-	$sql1 = "update events set is_recurring=0  where sl_id='$sl_id'";
-}
 $res=mysqli_query($conn,$sql1);
 if($res){
 		header('location: events.php?success');

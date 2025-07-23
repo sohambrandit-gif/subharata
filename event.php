@@ -39,7 +39,7 @@
                         <article class="bd-event-wrapper style-one">
                             <div class="bd-event-item">
                                 <div class="bd-event-thumb">
-                                    <a href="event-details.html">
+                                    <a href="event-details.php">
                                         <img src="assets/images/event/event-img-1.webp" alt="image">
                                     </a>
                                     <div class="bd-event-badge">
@@ -48,7 +48,7 @@
                                 </div>
                                 <div class="bd-event-content">
                                     <h5 class="bd-event-title underline mb-15">
-                                        <a href="event-details.html">Python Programming</a>
+                                        <a href="event-details.php">Python Programming</a>
                                     </h5>
                                     <p class="bd-event-description">Learn the basics of Python programming in this comprehensive
                                         online course.</p>
@@ -69,7 +69,7 @@
                         <article class="bd-event-wrapper style-one">
                             <div class="bd-event-item">
                                 <div class="bd-event-thumb">
-                                    <a href="event-details.html">
+                                    <a href="event-details.php">
                                         <img src="assets/images/event/event-img-2.webp" alt="image">
                                     </a>
                                     <div class="bd-event-badge">
@@ -78,7 +78,7 @@
                                 </div>
                                 <div class="bd-event-content">
                                     <h5 class="bd-event-title underline mb-15">
-                                        <a href="event-details.html">University Admission Webinar</a>
+                                        <a href="event-details.php">University Admission Webinar</a>
                                     </h5>
                                     <p class="bd-event-description">Join our webinar to learn more about the university admission
                                         process and tips.</p>
@@ -99,7 +99,7 @@
                         <article class="bd-event-wrapper style-one">
                             <div class="bd-event-item">
                                 <div class="bd-event-thumb">
-                                    <a href="event-details.html">
+                                    <a href="event-details.php">
                                         <img src="assets/images/event/event-img-3.webp" alt="image">
                                     </a>
                                     <div class="bd-event-badge">
@@ -108,7 +108,7 @@
                                 </div>
                                 <div class="bd-event-content">
                                     <h5 class="bd-event-title underline mb-15">
-                                        <a href="event-details.html">Modern Teaching Strategies</a>
+                                        <a href="event-details.php">Modern Teaching Strategies</a>
                                     </h5>
                                     <p class="bd-event-description">Explore innovative teaching methods and tools for modern
                                         classrooms.</p>
@@ -129,7 +129,7 @@
                         <article class="bd-event-wrapper style-one">
                             <div class="bd-event-item">
                                 <div class="bd-event-thumb">
-                                    <a href="event-details.html">
+                                    <a href="event-details.php">
                                         <img src="assets/images/event/event-img-4.webp" alt="image">
                                     </a>
                                     <div class="bd-event-badge">
@@ -138,7 +138,7 @@
                                 </div>
                                 <div class="bd-event-content">
                                     <h5 class="bd-event-title underline mb-15">
-                                        <a href="event-details.html">Kindergarten Creativity Workshop</a>
+                                        <a href="event-details.php">Kindergarten Creativity Workshop</a>
                                     </h5>
                                     <p class="bd-event-description">Interactive workshop on fostering creativity in early
                                         childhood education.</p>
@@ -159,7 +159,7 @@
                         <article class="bd-event-wrapper style-one">
                             <div class="bd-event-item">
                                 <div class="bd-event-thumb">
-                                    <a href="event-details.html">
+                                    <a href="event-details.php">
                                         <img src="assets/images/event/event-img-5.webp" alt="image">
                                     </a>
                                     <div class="bd-event-badge">
@@ -168,7 +168,7 @@
                                 </div>
                                 <div class="bd-event-content">
                                     <h5 class="bd-event-title underline mb-15">
-                                        <a href="event-details.html">Advanced Data Science</a>
+                                        <a href="event-details.php">Advanced Data Science</a>
                                     </h5>
                                     <p class="bd-event-description">Advanced course on data science techniques and tools for
                                         professionals.</p>
@@ -189,7 +189,7 @@
                         <article class="bd-event-wrapper style-one">
                             <div class="bd-event-item">
                                 <div class="bd-event-thumb">
-                                    <a href="event-details.html">
+                                    <a href="event-details.php">
                                         <img src="assets/images/event/event-img-6.webp" alt="image">
                                     </a>
                                     <div class="bd-event-badge">
@@ -198,7 +198,7 @@
                                 </div>
                                 <div class="bd-event-content">
                                     <h5 class="bd-event-title underline mb-15">
-                                        <a href="event-details.html">University Open Day</a>
+                                        <a href="event-details.php">University Open Day</a>
                                     </h5>
                                     <p class="bd-event-description">Visit our campus and meet faculty members to learn more about
                                         our programs.</p>
