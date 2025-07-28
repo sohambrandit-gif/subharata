@@ -76,7 +76,7 @@
                             <nav>
                                 <ul>
                                     <li><a href="student-section.php">Student Section</a></li>
-                                    <li><a href="courses.html">Marketing</a></li>
+                                    <li><a href="event.php">Events</a></li>
                                     <li><a href="courses.html">Photography</a></li>
                                     <li><a href="courses.html">Life Style</a></li>
                                     <li><a href="courses.html">Health &amp; Fitness</a></li>

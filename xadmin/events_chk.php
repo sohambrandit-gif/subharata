@@ -5,15 +5,15 @@ $title=mysqli_real_escape_string($conn,$_POST['title']);
 $description=mysqli_real_escape_string($conn,$_POST['description']);
 $duration=mysqli_real_escape_string($conn,$_POST['duration']);
 $start_date = mysqli_real_escape_string($conn, $_POST['start_date']);
-$end_date = mysqli_real_escape_string($conn, $_POST['end_date']);
+$mode = mysqli_real_escape_string($conn, $_POST['mode']);
 $artist_info = mysqli_real_escape_string($conn, $_POST['artist_info']);
 $position=mysqli_real_escape_string($conn,$_POST['position']);
 if($sl_id==''){
-	$sql1 = "INSERT INTO events (title, description, start_date, end_date, artist_info,position) VALUES ('$title', '$description', '$start_date', '$end_date', '$artist_info','$position')";
+	$sql1 = "INSERT INTO events (title, description, start_date, mode, artist_info,position) VALUES ('$title', '$description', '$start_date', '$mode', '$artist_info','$position')";
 	$res=mysqli_query($conn,$sql1);
 	$sl_id=mysqli_insert_id($conn);
 }else{
-	$sql1 = "UPDATE events SET title='$title',description='$description',start_date='$start_date',end_date='$end_date',artist_info='$artist_info',position='$position' WHERE sl_id='$sl_id'";
+	$sql1 = "UPDATE events SET title='$title',description='$description',start_date='$start_date',mode='$mode',artist_info='$artist_info',position='$position' WHERE sl_id='$sl_id'";
 	$res=mysqli_query($conn,$sql1);
 }
 if ($_FILES['image']['name']!='') {

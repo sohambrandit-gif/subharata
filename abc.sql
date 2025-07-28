@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 23, 2025 at 06:02 PM
+-- Generation Time: Jul 28, 2025 at 06:20 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -48,7 +48,7 @@ CREATE TABLE `artists` (
 --
 
 INSERT INTO `artists` (`sl_id`, `artist1_name`, `artist1_img`, `artist2_name`, `artist2_img`, `artist3_name`, `artist3_img`, `artist4_name`, `artist4_img`, `artist5_name`, `artist5_img`, `event_id`, `valid`) VALUES
-(0, 'Subhabrata', 'artist_250723055840_1.avif', 'Lopamudra', 'artist_250723055840_2.avif', '', '', '', '', '', '', '1', 1);
+(0, 'Subhabrata', 'artist_250728053941_1.png', 'Lopamudra', 'artist_250728054729_2.png', '', '', '', '', '', '', '1', 1);
 
 -- --------------------------------------------------------
 
@@ -234,7 +234,7 @@ CREATE TABLE `events` (
   `image` varchar(255) NOT NULL,
   `description` text NOT NULL,
   `start_date` date NOT NULL,
-  `end_date` date NOT NULL,
+  `mode` varchar(255) NOT NULL,
   `artist_info` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `valid` int(11) NOT NULL DEFAULT 1,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
@@ -245,9 +245,9 @@ CREATE TABLE `events` (
 -- Dumping data for table `events`
 --
 
-INSERT INTO `events` (`sl_id`, `title`, `image`, `description`, `start_date`, `end_date`, `artist_info`, `valid`, `created_at`, `position`) VALUES
-(1, 'Event 1', 'events250723105250.avif', 'An \"event sample image description\" should focus on clearly and concisely conveying the visual elements of an image related to an event. This includes details about the setting, people, and any specific objects or actions present, ensuring accessibility for those who rely on screen readers. ', '2025-07-24', '2025-07-24', '', 1, '2025-07-23 08:52:50', 1),
-(2, 'Event 2', '', '', '0000-00-00', '0000-00-00', '', 1, '2025-07-10 06:27:11', 2);
+INSERT INTO `events` (`sl_id`, `title`, `image`, `description`, `start_date`, `mode`, `artist_info`, `valid`, `created_at`, `position`) VALUES
+(1, 'Event 1', 'events250723105250.avif', 'An \"event sample image description\" should focus on clearly and concisely conveying the visual elements of an image related to an event.', '2025-08-24', 'Offline', '', 1, '2025-07-28 16:02:07', 1),
+(2, 'Event 2', 'events250728105827.avif', '<p>Very Good Event</p>', '2025-08-10', 'Offline', '', 1, '2025-07-28 08:59:11', 2);
 
 -- --------------------------------------------------------
 
@@ -287,15 +287,20 @@ CREATE TABLE `event_location` (
   `image` varchar(255) NOT NULL,
   `description` text NOT NULL,
   `time` varchar(255) NOT NULL,
-  `valid` int(11) NOT NULL DEFAULT 1
+  `valid` int(11) NOT NULL DEFAULT 1,
+  `price1` int(11) NOT NULL,
+  `price2` int(11) NOT NULL,
+  `price3` int(11) NOT NULL,
+  `price4` int(11) NOT NULL,
+  `price5` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `event_location`
 --
 
-INSERT INTO `event_location` (`sl_id`, `event_id`, `date`, `total_seat`, `booked`, `location`, `address`, `addressiframe`, `pin`, `contact_no`, `language`, `category`, `type1`, `seat1`, `booked1`, `type2`, `seat2`, `booked2`, `type3`, `seat3`, `booked3`, `type4`, `seat4`, `booked4`, `type5`, `seat5`, `booked5`, `lastbooking_date`, `image`, `description`, `time`, `valid`) VALUES
-(3, 1, '2025-07-31', 500, 0, 'Bhowani', '50/5e, Harish Mukherjee Rd, Bhowanipore, Kolkata, West Bengal 700025', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117925.08523751747!2d88.19970464335935!3d22.5357191!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8501aade659bc4e7%3A0x7549c9efa412bccb!2sBrandIT%20Consultancy!5e0!3m2!1sen!2sin!4v1753275866530!5m2!1sen!2sin\"width=\"600\" height=\"300\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>', '711102', '9874563211', 'Bengali', 'Voice Art', 'VIP', 50, 0, 'DIAMOND', 100, 0, 'GOLD', 200, 0, 'SILVER', 250, 0, '', 0, 0, '0000-00-00', 'event_250723044026.avif', '', '5:30pm-8:30pm', 1);
+INSERT INTO `event_location` (`sl_id`, `event_id`, `date`, `total_seat`, `booked`, `location`, `address`, `addressiframe`, `pin`, `contact_no`, `language`, `category`, `type1`, `seat1`, `booked1`, `type2`, `seat2`, `booked2`, `type3`, `seat3`, `booked3`, `type4`, `seat4`, `booked4`, `type5`, `seat5`, `booked5`, `lastbooking_date`, `image`, `description`, `time`, `valid`, `price1`, `price2`, `price3`, `price4`, `price5`) VALUES
+(3, 1, '2025-07-31', 500, 0, 'Bhowani', '50/5e, Harish Mukherjee Rd, Bhowanipore, Kolkata, West Bengal 700025', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117925.08523751747!2d88.19970464335935!3d22.5357191!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8501aade659bc4e7%3A0x7549c9efa412bccb!2sBrandIT%20Consultancy!5e0!3m2!1sen!2sin!4v1753275866530!5m2!1sen!2sin\"width=\"600\" height=\"300\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>', '711102', '9874563211', 'Bengali', 'Voice Art', 'VIP', 20, 0, 'DIAMOND', 50, 0, 'GOLD', 150, 0, 'SILVER', 200, 0, 'BALCONY', 5, 0, '0000-00-00', 'event_250728055626.jpg', '<p>Join this masterclass to explore the pathways to a thriving career in education. From classroom management to leveraging technology for effective teaching, this event covers the essentials for aspiring and current educators. Learn from experienced professionals and gain practical insights to enhance your teaching strategies.</p>', '5:30pm-8:30pm', 1, 250, 200, 150, 100, 50);
 
 -- --------------------------------------------------------
 
@@ -855,7 +860,7 @@ ALTER TABLE `events`
 -- AUTO_INCREMENT for table `event_location`
 --
 ALTER TABLE `event_location`
-  MODIFY `sl_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `sl_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `faq`

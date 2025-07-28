@@ -240,7 +240,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-md-4">
+                                <div class="col-md-3">
                                     <div class="form-group">
                                         <label>type1</label>
                                         <select class="form-control" name="type1">
@@ -249,24 +249,32 @@
                                             <option value="DIAMOND" <?php echo ($row['type1'] == 'DIAMOND') ? 'selected' : ''; ?>>DIAMOND</option>
                                             <option value="GOLD" <?php echo ($row['type1'] == 'GOLD') ? 'selected' : ''; ?>>GOLD</option>
                                             <option value="SILVER" <?php echo ($row['type1'] == 'SILVER') ? 'selected' : ''; ?>>SILVER</option>
+                                            <option value="BALCONY" <?php echo ($row['type1'] == 'BALCONY') ? 'selected' : ''; ?>>BALCONY</option>
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>price1</label>
+                                        <input class="form-control" type="number" name="price1"
+                                            value="<?php echo $row['price1']; ?>">
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
                                     <div class="form-group">
                                         <label>seat1</label>
                                         <input class="form-control" type="number" name="seat1"
                                             value="<?php echo $row['seat1']; ?>">
                                     </div>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-3">
                                     <div class="form-group">
                                         <label>booked1</label>
                                         <input class="form-control" type="number" name="booked1"
                                             value="<?php echo $row['booked1']; ?>">
                                     </div>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-3">
                                     <div class="form-group">
                                         <label>type2</label>
                                         <select class="form-control" name="type2">
@@ -275,24 +283,32 @@
                                             <option value="DIAMOND" <?php echo ($row['type2'] == 'DIAMOND') ? 'selected' : ''; ?>>DIAMOND</option>
                                             <option value="GOLD" <?php echo ($row['type2'] == 'GOLD') ? 'selected' : ''; ?>>GOLD</option>
                                             <option value="SILVER" <?php echo ($row['type2'] == 'SILVER') ? 'selected' : ''; ?>>SILVER</option>
+                                            <option value="BALCONY" <?php echo ($row['type2'] == 'BALCONY') ? 'selected' : ''; ?>>BALCONY</option>
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>price2</label>
+                                        <input class="form-control" type="number" name="price2"
+                                            value="<?php echo $row['price2']; ?>">
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
                                     <div class="form-group">
                                         <label>seat2</label>
                                         <input class="form-control" type="number" name="seat2"
                                             value="<?php echo $row['seat2']; ?>">
                                     </div>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-3">
                                     <div class="form-group">
                                         <label>booked2</label>
                                         <input class="form-control" type="number" name="booked2"
                                             value="<?php echo $row['booked2']; ?>">
                                     </div>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-3">
                                     <div class="form-group">
                                         <label>type3</label>
                                         <select class="form-control" name="type3">
@@ -301,24 +317,32 @@
                                             <option value="DIAMOND" <?php echo ($row['type3'] == 'DIAMOND') ? 'selected' : ''; ?>>DIAMOND</option>
                                             <option value="GOLD" <?php echo ($row['type3'] == 'GOLD') ? 'selected' : ''; ?>>GOLD</option>
                                             <option value="SILVER" <?php echo ($row['type3'] == 'SILVER') ? 'selected' : ''; ?>>SILVER</option>
+                                            <option value="BALCONY" <?php echo ($row['type3'] == 'BALCONY') ? 'selected' : ''; ?>>BALCONY</option>
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>price3</label>
+                                        <input class="form-control" type="number" name="price3"
+                                            value="<?php echo $row['price3']; ?>">
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
                                     <div class="form-group">
                                         <label>seat3</label>
                                         <input class="form-control" type="number" name="seat3"
                                             value="<?php echo $row['seat3']; ?>">
                                     </div>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-3">
                                     <div class="form-group">
                                         <label>booked3</label>
                                         <input class="form-control" type="number" name="booked3"
                                             value="<?php echo $row['booked3']; ?>">
                                     </div>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-3">
                                     <div class="form-group">
                                         <label>type4</label>
                                         <select class="form-control" name="type4">
@@ -327,21 +351,63 @@
                                             <option value="DIAMOND" <?php echo ($row['type4'] == 'DIAMOND') ? 'selected' : ''; ?>>DIAMOND</option>
                                             <option value="GOLD" <?php echo ($row['type4'] == 'GOLD') ? 'selected' : ''; ?>>GOLD</option>
                                             <option value="SILVER" <?php echo ($row['type4'] == 'SILVER') ? 'selected' : ''; ?>>SILVER</option>
+                                            <option value="BALCONY" <?php echo ($row['type4'] == 'BALCONY') ? 'selected' : ''; ?>>BALCONY</option>
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>price4</label>
+                                        <input class="form-control" type="number" name="price4"
+                                            value="<?php echo $row['price4']; ?>">
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
                                     <div class="form-group">
                                         <label>seat4</label>
                                         <input class="form-control" type="number" name="seat4"
                                             value="<?php echo $row['seat4']; ?>">
                                     </div>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-3">
                                     <div class="form-group">
                                         <label>booked4</label>
                                         <input class="form-control" type="number" name="booked4"
                                             value="<?php echo $row['booked4']; ?>">
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>type5</label>
+                                        <select class="form-control" name="type5">
+                                            <option value="VIP" <?php echo ($row['type5'] == 'VIP') ? 'selected' : ''; ?>>
+                                                VIP</option>
+                                            <option value="DIAMOND" <?php echo ($row['type5'] == 'DIAMOND') ? 'selected' : ''; ?>>DIAMOND</option>
+                                            <option value="GOLD" <?php echo ($row['type5'] == 'GOLD') ? 'selected' : ''; ?>>GOLD</option>
+                                            <option value="SILVER" <?php echo ($row['type5'] == 'SILVER') ? 'selected' : ''; ?>>SILVER</option>
+                                            <option value="BALCONY" <?php echo ($row['type5'] == 'BALCONY') ? 'selected' : ''; ?>>BALCONY</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>price5</label>
+                                        <input class="form-control" type="number" name="price5"
+                                            value="<?php echo $row['price5']; ?>">
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>seat5</label>
+                                        <input class="form-control" type="number" name="seat5"
+                                            value="<?php echo $row['seat5']; ?>">
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>booked5</label>
+                                        <input class="form-control" type="number" name="booked5"
+                                            value="<?php echo $row['booked5']; ?>">
                                     </div>
                                 </div>
                             </div>
@@ -356,7 +422,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Image</label>
+                                        <label>Image Banner (1320 x 600 px)</label>
                                         <input class="form-control" type="file" name="image">
                                         <?php if ($row['image'] != '') { ?>
                                             <img src="<?php echo '../uploads/event_location/' . $row['image']; ?>"

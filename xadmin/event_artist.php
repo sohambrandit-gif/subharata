@@ -160,7 +160,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Artist Image</label>
+                                        <label>Artist Image (2600 x 3000px)</label>
                                         <input class="form-control" type="file" name="artist1_img">
                                         <?php if ($row['artist1_img'] != '') { ?>
                                             <img src="<?php echo '../uploads/events/artist_img/' . $row['artist1_img']; ?>"
@@ -179,10 +179,10 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Artist 2 Image</label>
+                                        <label>Artist Image (2600 x 3000px)</label>
                                         <input class="form-control" type="file" name="artist2_img">
                                         <?php if ($row['artist2_img'] != '') { ?>
-                                            <img src="<?php echo '../uploads/events/artist_img' . $row['artist2_img']; ?>"
+                                            <img src="<?php echo '../uploads/events/artist_img/' . $row['artist2_img']; ?>"
                                                 height="50" width="50" />
                                         <?php } ?>
                                     </div>
@@ -199,10 +199,10 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Artist 3 Image</label>
+                                        <label>Artist Image (2600 x 3000px)</label>
                                         <input class="form-control" type="file" name="artist3_img">
                                         <?php if ($row['artist3_img'] != '') { ?>
-                                            <img src="<?php echo '../uploads/events/artist_img' . $row['artist3_img']; ?>"
+                                            <img src="<?php echo '../uploads/events/artist_img/' . $row['artist3_img']; ?>"
                                                 height="50" width="50" />
                                         <?php } ?>
                                     </div>
@@ -219,10 +219,10 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Artist 4 Image</label>
+                                        <label>Artist Image (2600 x 3000px)</label>
                                         <input class="form-control" type="file" name="artist4_img">
                                         <?php if ($row['artist4_img'] != '') { ?>
-                                            <img src="<?php echo '../uploads/events/artist_img' . $row['artist4_img']; ?>"
+                                            <img src="<?php echo '../uploads/events/artist_img/' . $row['artist4_img']; ?>"
                                                 height="50" width="50" />
                                         <?php } ?>
                                     </div>
@@ -239,10 +239,10 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Artist 5 Image</label>
+                                        <label>Artist Image (2600 x 3000px)</label>
                                         <input class="form-control" type="file" name="artist5_img">
                                         <?php if ($row['artist5_img'] != '') { ?>
-                                            <img src="<?php echo '../uploads/events/artist_img' . $row['artist5_img']; ?>"
+                                            <img src="<?php echo '../uploads/events/artist_img/' . $row['artist5_img']; ?>"
                                                 height="50" width="50" />
                                         <?php } ?>
                                     </div>

@@ -18,22 +18,27 @@ $category = mysqli_real_escape_string($conn, $_POST['category']);
 
 // Seat type data
 $type1 = mysqli_real_escape_string($conn, $_POST['type1']);
+$price1 = mysqli_real_escape_string($conn, $_POST['price1']);
 $seat1 = mysqli_real_escape_string($conn, $_POST['seat1']);
 $booked1 = mysqli_real_escape_string($conn, $_POST['booked1']);
 
 $type2 = mysqli_real_escape_string($conn, $_POST['type2']);
+$price2 = mysqli_real_escape_string($conn, $_POST['price2']);
 $seat2 = mysqli_real_escape_string($conn, $_POST['seat2']);
 $booked2 = mysqli_real_escape_string($conn, $_POST['booked2']);
 
 $type3 = mysqli_real_escape_string($conn, $_POST['type3']);
+$price3 = mysqli_real_escape_string($conn, $_POST['price3']);
 $seat3 = mysqli_real_escape_string($conn, $_POST['seat3']);
 $booked3 = mysqli_real_escape_string($conn, $_POST['booked3']);
 
 $type4 = mysqli_real_escape_string($conn, $_POST['type4']);
+$price4 = mysqli_real_escape_string($conn, $_POST['price4']);
 $seat4 = mysqli_real_escape_string($conn, $_POST['seat4']);
 $booked4 = mysqli_real_escape_string($conn, $_POST['booked4']);
 
 $type5 = mysqli_real_escape_string($conn, $_POST['type5']);
+$price5 = mysqli_real_escape_string($conn, $_POST['price5']);
 $seat5 = mysqli_real_escape_string($conn, $_POST['seat5']);
 $booked5 = mysqli_real_escape_string($conn, $_POST['booked5']);
 
@@ -43,19 +48,19 @@ if ($sl_id == '') {
     // Insert new event
      $sql = "INSERT INTO event_location (
             event_id, date, time, total_seat, location, address,addressiframe, pin, contact_no,language,category,
-            type1, seat1, booked1,
-            type2, seat2, booked2,
-            type3, seat3, booked3,
-            type4, seat4, booked4,
-            type5, seat5, booked5,
+            type1, price1, seat1, booked1,
+            type2, price2, seat2, booked2,
+            type3, price3, seat3, booked3,
+            type4, price4, seat4, booked4,
+            type5, price5, seat5, booked5,
             lastbooking_date, description
         ) VALUES (
             '$event_id', '$date', '$time', '$total_seat', '$location', '$address','$addressiframe', '$pin', '$contact_no','$language','$category',
-            '$type1', '$seat1', '$booked1',
-            '$type2', '$seat2', '$booked2',
-            '$type3', '$seat3', '$booked3',
-            '$type4', '$seat4', '$booked4',
-            '$type5', '$seat5', '$booked5',
+            '$type1', '$price1', '$seat1', '$booked1',
+            '$type2', '$price2' '$seat2', '$booked2',
+            '$type3', '$price3' '$seat3', '$booked3',
+            '$type4', '$price4' '$seat4', '$booked4',
+            '$type5', '$price5' '$seat5', '$booked5',
             '$lastbooking_date', '$description'
         )";
 } else {
@@ -88,7 +93,12 @@ if ($sl_id == '') {
             seat5 = '$seat5',
             booked5 = '$booked5',
             lastbooking_date = '$lastbooking_date',
-            description = '$description'
+            description = '$description',
+            price1 = '$price1',
+            price2 = '$price2',
+            price3 = '$price3',
+            price4 = '$price4',
+            price5 = '$price5' 
         WHERE sl_id = $sl_id";
 }
 
