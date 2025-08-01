@@ -435,7 +435,7 @@
                     <?php if(!isset($_SESSION['login']) || $_SESSION['login']== '' ){ ?>
                         <div class="bd-header-sign-btn">
                             <a class="bd-btn btn-outline-primary h-40px" href="login.php">Login</a>
-                            <a class="bd-btn btn-outline-border-primary h-40px" href="sign-up.html">Register</a>
+                            <a class="bd-btn btn-outline-border-primary h-40px" href="register.php">Register</a>
                         </div>
                     <?php }else { ?>
                         <div class="bd-header-sign-btn">

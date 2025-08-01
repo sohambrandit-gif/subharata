@@ -48,96 +48,27 @@ if (!isset($_SESSION['login']) || $_SESSION['login'] == '') {
     <div class="page-header">
       <div class="row">
         <div class="col-sm-12">
-          <h3 class="page-title">Classes</h3>
+          <h3 class="page-title">Student Section</h3>
         </div>
       </div>
     </div>
-    <!-- /Page Header -->
-    <div class="row">
-      <div class="col-sm-12">
-        <div class="card">
-          <div class="card-header">
-            <h4 class="card-title">Classes</h4>
-          </div>
-          <div class="card-body">
-            <div class="table-responsive">
-              <table class="datatable table table-stripped" id="example1">
-                <thead>
-                  <tr>
-                    <th>#id</th>
-                    <th>title</th>
-                    <th>description</th>
-                    <th>duration</th>
-                    <th>valid</th>
-                    <th>action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <?php $sql12 = "SELECT * FROM classes order by sl_id desc ";
-                  $res = mysqli_query($conn, $sql12);
-                  while ($row = mysqli_fetch_array($res)) {
-                    ?>
-                    <tr>
-                      <td><?php echo $row['sl_id']; ?></td>
-                      <td><?php echo $row['title']; ?></td>
-                      <td><?php echo $row['description']; ?></td>
-                      <td><?php echo $row['duration']; ?></td>
-                      <td><?php if ($row['valid'] == 0) {
-                        echo "Block";
-                      } else {
-                        echo "Active";
-                      } ?>
-                        <?php if ($row['featured'] == 0) {
-                          echo "";
-                        } else {
-                          echo "Featured";
-                        } ?></td>
-                      <td>
-                        <div class="btn-group">
-                          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">Action</button>
-                          <div class="dropdown-menu" x-placement="bottom-start"
-                            style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 38px, 0px);">
-                            <?php if ($row['valid'] == 0) { ?>
-                              <a class="dropdown-item"
-                                href="classes_action.php?id=<?php echo $row['sl_id']; ?>&action=Active">Set Active</a>
-                            <?php } else { ?>
-                              <a class="dropdown-item"
-                                href="classes_action.php?id=<?php echo $row['sl_id']; ?>&action=Regular">Set Block</a>
-                            <?php } ?>
+    
 
-
-                            <a class="dropdown-item" href="classes.php?sl_id=<?php echo $row['sl_id']; ?>#update">Edit</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="classes_del.php?id=<?php echo $row['sl_id']; ?>"
-                              onclick="return confirm('Do you want to delete the item?')">Delete</a>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                  <?php } ?>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
     <div class="row" id="update">
       <div class="col-md-12">
         <div class="card">
           <div class="card-header">
-            <h4 class="card-title">Add Classes</h4>
+            <h4 class="card-title">Edit</h4>
           </div>
           <div class="card-body">
-            <form action="classes_chk.php?id=<?php echo $_GET['sl_id']; ?>" method="post" enctype="multipart/form-data">
+            <form action="student_section_chk.php?id=1" method="post" enctype="multipart/form-data">
               <?php
 
-              if (isset($_GET['sl_id']) && $_GET['sl_id'] != '') {
-                $sql12 = "SELECT * FROM classes where sl_id=" . $_GET['sl_id'];
+              
+                $sql12 = "SELECT * FROM student_section where sl_id=1";
                 $res = mysqli_query($conn, $sql12);
                 $row = mysqli_fetch_array($res);
-              }
+              
               ?>
               <div class="row">
                 <div class="col-md-6">
@@ -151,15 +82,8 @@ if (!isset($_SESSION['login']) || $_SESSION['login'] == '') {
                     <label>Image</label>
                     <input class="form-control" type="file" name="image">
                     <?php if ($row['image'] != '') { ?>
-                      <img src="<?php echo '../uploads/classes/' . $row['image']; ?>" height="50" width="50" />
+                      <img src="<?php echo '../uploads/student_section/' . $row['image']; ?>" height="50" width="50" />
                     <?php } ?>
-                  </div>
-                </div>
-                <div class="col-md-12">
-                  <div class="form-group">
-                    <label>Description</label>
-                    <textarea rows="5" cols="5" class="form-control" placeholder="Enter text here" name="description"
-                      id="description"><?php echo $row['description']; ?></textarea>
                   </div>
                 </div>
                 <div class="col-md-6">
@@ -176,7 +100,7 @@ if (!isset($_SESSION['login']) || $_SESSION['login'] == '') {
                     <input class="form-control" type="file" name="sample_a_audio">
                     <?php if ($row['sample_a_audio'] != '') { ?>
                       <audio controls>
-                        <source src="<?php echo '../uploads/classes/sample_audio/' . $row['sample_a_audio']; ?>"
+                        <source src="<?php echo '../uploads/student_section/sample_audio/' . $row['sample_a_audio']; ?>"
                           type="audio/mpeg">
                         Your browser does not support the audio element.
                       </audio>
@@ -189,7 +113,7 @@ if (!isset($_SESSION['login']) || $_SESSION['login'] == '') {
                     <input class="form-control" type="file" name="sample_b_audio">
                     <?php if ($row['sample_b_audio'] != '') { ?>
                       <audio controls>
-                        <source src="<?php echo '../uploads/classes/sample_audio/' . $row['sample_b_audio']; ?>"
+                        <source src="<?php echo '../uploads/student_section/sample_audio/' . $row['sample_b_audio']; ?>"
                           type="audio/mpeg">
                         Your browser does not support the audio element.
                       </audio>
@@ -202,7 +126,7 @@ if (!isset($_SESSION['login']) || $_SESSION['login'] == '') {
                     <input class="form-control" type="file" name="sample_c_audio">
                     <?php if ($row['sample_c_audio'] != '') { ?>
                       <audio controls>
-                        <source src="<?php echo '../uploads/classes/sample_audio/' . $row['sample_c_audio']; ?>"
+                        <source src="<?php echo '../uploads/student_section/sample_audio/' . $row['sample_c_audio']; ?>"
                           type="audio/mpeg">
                         Your browser does not support the audio element.
                       </audio>
@@ -215,7 +139,7 @@ if (!isset($_SESSION['login']) || $_SESSION['login'] == '') {
                     <input class="form-control" type="file" name="sample_d_audio">
                     <?php if ($row['sample_d_audio'] != '') { ?>
                       <audio controls>
-                        <source src="<?php echo '../uploads/classes/sample_audio/' . $row['sample_d_audio']; ?>"
+                        <source src="<?php echo '../uploads/student_section/sample_audio/' . $row['sample_d_audio']; ?>"
                           type="audio/mpeg">
                         Your browser does not support the audio element.
                       </audio>
@@ -234,7 +158,7 @@ if (!isset($_SESSION['login']) || $_SESSION['login'] == '') {
                     <input class="form-control" type="file" name="class_a1_audio">
                     <?php if ($row['class_a1_audio'] != '') { ?>
                       <audio controls>
-                        <source src="<?php echo '../uploads/classes/class_audio/' . $row['class_a1_audio']; ?>"
+                        <source src="<?php echo '../uploads/student_section/class_audio/' . $row['class_a1_audio']; ?>"
                           type="audio/mpeg">
                         Your browser does not support the audio element.
                       </audio>
@@ -247,7 +171,7 @@ if (!isset($_SESSION['login']) || $_SESSION['login'] == '') {
                     <input class="form-control" type="file" name="class_a2_audio">
                     <?php if ($row['class_a2_audio'] != '') { ?>
                       <audio controls>
-                        <source src="<?php echo '../uploads/classes/class_audio/' . $row['class_a2_audio']; ?>"
+                        <source src="<?php echo '../uploads/student_section/class_audio/' . $row['class_a2_audio']; ?>"
                           type="audio/mpeg">
                         Your browser does not support the audio element.
                       </audio>
@@ -259,7 +183,7 @@ if (!isset($_SESSION['login']) || $_SESSION['login'] == '') {
                     <label>Class A PDF</label>
                     <input class="form-control" type="file" name="class_a_pdf">
                     <?php if ($row['class_a_pdf'] != '') { ?>
-                      <iframe src="<?php echo '../uploads/classes/class_pdf/' . $row['class_a_pdf']; ?>" width="100%"
+                      <iframe src="<?php echo '../uploads/student_section/class_pdf/' . $row['class_a_pdf']; ?>" width="100%"
                         height="200px"></iframe>
                     <?php } ?>
                   </div>
@@ -277,7 +201,7 @@ if (!isset($_SESSION['login']) || $_SESSION['login'] == '') {
                     <input class="form-control" type="file" name="class_b1_audio">
                     <?php if ($row['class_b1_audio'] != '') { ?>
                       <audio controls>
-                        <source src="<?php echo '../uploads/classes/class_audio/' . $row['class_b1_audio']; ?>"
+                        <source src="<?php echo '../uploads/student_section/class_audio/' . $row['class_b1_audio']; ?>"
                           type="audio/mpeg">
                         Your browser does not support the audio element.
                       </audio>
@@ -290,7 +214,7 @@ if (!isset($_SESSION['login']) || $_SESSION['login'] == '') {
                     <input class="form-control" type="file" name="class_b2_audio">
                     <?php if ($row['class_b2_audio'] != '') { ?>
                       <audio controls>
-                        <source src="<?php echo '../uploads/classes/class_audio/' . $row['class_b2_audio']; ?>"
+                        <source src="<?php echo '../uploads/student_section/class_audio/' . $row['class_b2_audio']; ?>"
                           type="audio/mpeg">
                         Your browser does not support the audio element.
                       </audio>
@@ -302,7 +226,7 @@ if (!isset($_SESSION['login']) || $_SESSION['login'] == '') {
                     <label>Class B PDF</label>
                     <input class="form-control" type="file" name="class_b_pdf">
                     <?php if ($row['class_b_pdf'] != '') { ?>
-                      <iframe src="<?php echo '../uploads/classes/class_pdf/' . $row['class_b_pdf']; ?>" width="100%"
+                      <iframe src="<?php echo '../uploads/student_section/class_pdf/' . $row['class_b_pdf']; ?>" width="100%"
                         height="200px"></iframe>
                     <?php } ?>
                   </div>
@@ -320,7 +244,7 @@ if (!isset($_SESSION['login']) || $_SESSION['login'] == '') {
                     <input class="form-control" type="file" name="class_c1_audio">
                     <?php if ($row['class_c1_audio'] != '') { ?>
                       <audio controls>
-                        <source src="<?php echo '../uploads/classes/class_audio/' . $row['class_c1_audio']; ?>"
+                        <source src="<?php echo '../uploads/student_section/class_audio/' . $row['class_c1_audio']; ?>"
                           type="audio/mpeg">
                         Your browser does not support the audio element.
                       </audio>
@@ -333,7 +257,7 @@ if (!isset($_SESSION['login']) || $_SESSION['login'] == '') {
                     <input class="form-control" type="file" name="class_c2_audio">
                     <?php if ($row['class_c2_audio'] != '') { ?>
                       <audio controls>
-                        <source src="<?php echo '../uploads/classes/class_audio/' . $row['class_c2_audio']; ?>"
+                        <source src="<?php echo '../uploads/student_section/class_audio/' . $row['class_c2_audio']; ?>"
                           type="audio/mpeg">
                         Your browser does not support the audio element.
                       </audio>
@@ -345,7 +269,7 @@ if (!isset($_SESSION['login']) || $_SESSION['login'] == '') {
                     <label>Class C PDF</label>
                     <input class="form-control" type="file" name="class_c_pdf">
                     <?php if ($row['class_c_pdf'] != '') { ?>
-                      <iframe src="<?php echo '../uploads/classes/class_pdf/' . $row['class_c_pdf']; ?>" width="100%"
+                      <iframe src="<?php echo '../uploads/student_section/class_pdf/' . $row['class_c_pdf']; ?>" width="100%"
                         height="200px"></iframe>
                     <?php } ?>
                   </div>
@@ -363,7 +287,7 @@ if (!isset($_SESSION['login']) || $_SESSION['login'] == '') {
                     <input class="form-control" type="file" name="class_d1_audio">
                     <?php if ($row['class_d1_audio'] != '') { ?>
                       <audio controls>
-                        <source src="<?php echo '../uploads/classes/class_audio/' . $row['class_d1_audio']; ?>"
+                        <source src="<?php echo '../uploads/student_section/class_audio/' . $row['class_d1_audio']; ?>"
                           type="audio/mpeg">
                         Your browser does not support the audio element.
                       </audio>
@@ -376,7 +300,7 @@ if (!isset($_SESSION['login']) || $_SESSION['login'] == '') {
                     <input class="form-control" type="file" name="class_d2_audio">
                     <?php if ($row['class_d2_audio'] != '') { ?>
                       <audio controls>
-                        <source src="<?php echo '../uploads/classes/class_audio/' . $row['class_d2_audio']; ?>"
+                        <source src="<?php echo '../uploads/student_section/class_audio/' . $row['class_d2_audio']; ?>"
                           type="audio/mpeg">
                         Your browser does not support the audio element.
                       </audio>
@@ -388,7 +312,7 @@ if (!isset($_SESSION['login']) || $_SESSION['login'] == '') {
                     <label>Class D PDF</label>
                     <input class="form-control" type="file" name="class_d_pdf">
                     <?php if ($row['class_d_pdf'] != '') { ?>
-                      <iframe src="<?php echo '../uploads/classes/class_pdf/' . $row['class_d_pdf']; ?>" width="100%"
+                      <iframe src="<?php echo '../uploads/student_section/class_pdf/' . $row['class_d_pdf']; ?>" width="100%"
                         height="200px"></iframe>
                     <?php } ?>
                   </div>

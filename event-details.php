@@ -57,21 +57,6 @@ if (!isset($_SESSION['login']) || $_SESSION['login'] == '') {
                 <div class="col-xxl-4 col-xl-4 col-lg-5 col-md-12">
                     <div class="bd-event-sidebar-wrapper bd-event-sidebar-top sidebar-sticky">
                         <div class="bd-event-sidebar mb-30">
-                            <div class="bd-event-countdown mb-20" style="display:none" id="countdown1">
-                                <div class="countdown-item bg-1" data-unit="days"></div>
-                                <div class="countdown-item bg-2" data-unit="hours"></div>
-                                <div class="countdown-item bg-3" data-unit="minutes"></div>
-                                <div class="countdown-item bg-4" data-unit="seconds"></div>
-                            </div>
-                            <div class="bd-event-info mb-20" style="display:none">
-                                <div class="bd-event-price-wrap d-flex-between">
-                                    <span class="title">Ticket Price</span>
-                                    <div class="bd-event-price">
-                                        <span class="current-price">$59.00</span>
-                                        <span class="old-price">$79.00</span>
-                                    </div>
-                                </div>
-                            </div>
                             <div class="bd-event-info-list">
                                 <ul>
                                     <li>
