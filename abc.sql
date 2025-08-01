@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 28, 2025 at 06:20 PM
+-- Generation Time: Aug 01, 2025 at 05:41 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -113,44 +113,6 @@ INSERT INTO `category` (`sl_id`, `name`, `image`, `position`, `featured`, `valid
 (2, 'Audio', NULL, 1, 0, 1),
 (3, 'Magazines', NULL, 2, 0, 1),
 (4, 'Merchandise ', NULL, 3, 0, 1);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `classes`
---
-
-CREATE TABLE `classes` (
-  `sl_id` int(255) NOT NULL,
-  `title` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `image` varchar(255) NOT NULL,
-  `class_a1_audio` varchar(255) NOT NULL,
-  `class_a_pdf` varchar(255) NOT NULL,
-  `class_b1_audio` varchar(255) NOT NULL,
-  `class_b_pdf` varchar(255) NOT NULL,
-  `class_c1_audio` varchar(255) NOT NULL,
-  `class_c_pdf` varchar(255) NOT NULL,
-  `class_d1_audio` varchar(255) NOT NULL,
-  `class_d_pdf` varchar(255) NOT NULL,
-  `description` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `valid` int(11) NOT NULL DEFAULT 1,
-  `duration` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `sample_a_audio` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
-  `sample_b_audio` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `sample_c_audio` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `sample_d_audio` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `class_a2_audio` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `class_b2_audio` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `class_c2_audio` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `class_d2_audio` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `classes`
---
-
-INSERT INTO `classes` (`sl_id`, `title`, `image`, `class_a1_audio`, `class_a_pdf`, `class_b1_audio`, `class_b_pdf`, `class_c1_audio`, `class_c_pdf`, `class_d1_audio`, `class_d_pdf`, `description`, `valid`, `duration`, `sample_a_audio`, `sample_b_audio`, `sample_c_audio`, `sample_d_audio`, `class_a2_audio`, `class_b2_audio`, `class_c2_audio`, `class_d2_audio`) VALUES
-(1, 'Class 1', 'classes250710011446.png', 'class_a_audio250710011446.mp3', 'class_a_pdf250710011446.pdf', 'class_b_audio250710011446.mp3', 'class_b_pdf250710011446.pdf', 'class_c_audio250710011446.mp3', 'class_c_pdf250710011446.pdf', 'class_d1_audio250723083602.mp3', 'class_d_pdf250723083602.pdf', '', 1, '5 weeks', 'sample_a_audio250723083602.mp3', 'sample_b_audio250723083602.mp3', 'sample_c_audio250723083602.mp3', 'sample_d_audio250723083602.mp3', 'class_a2_audio250723083602.mp3', 'class_b2_audio250723083602.mp3', 'class_c2_audio250723083602.mp3', 'class_d2_audio250723083602.mp3');
 
 -- --------------------------------------------------------
 
@@ -522,6 +484,44 @@ CREATE TABLE `slider` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `student_section`
+--
+
+CREATE TABLE `student_section` (
+  `sl_id` int(255) NOT NULL,
+  `title` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `image` varchar(255) NOT NULL,
+  `class_a1_audio` varchar(255) NOT NULL,
+  `class_a_pdf` varchar(255) NOT NULL,
+  `class_b1_audio` varchar(255) NOT NULL,
+  `class_b_pdf` varchar(255) NOT NULL,
+  `class_c1_audio` varchar(255) NOT NULL,
+  `class_c_pdf` varchar(255) NOT NULL,
+  `class_d1_audio` varchar(255) NOT NULL,
+  `class_d_pdf` varchar(255) NOT NULL,
+  `description` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `valid` int(11) NOT NULL DEFAULT 1,
+  `duration` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `sample_a_audio` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
+  `sample_b_audio` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `sample_c_audio` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `sample_d_audio` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `class_a2_audio` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `class_b2_audio` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `class_c2_audio` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `class_d2_audio` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `student_section`
+--
+
+INSERT INTO `student_section` (`sl_id`, `title`, `image`, `class_a1_audio`, `class_a_pdf`, `class_b1_audio`, `class_b_pdf`, `class_c1_audio`, `class_c_pdf`, `class_d1_audio`, `class_d_pdf`, `description`, `valid`, `duration`, `sample_a_audio`, `sample_b_audio`, `sample_c_audio`, `sample_d_audio`, `class_a2_audio`, `class_b2_audio`, `class_c2_audio`, `class_d2_audio`) VALUES
+(1, 'Student Section', 'classes250710011446.png', 'class_a_audio250710011446.mp3', 'class_a_pdf250801053104.pdf', 'class_b_audio250710011446.mp3', 'class_b_pdf250801052034.pdf', 'class_c_audio250710011446.mp3', 'class_c_pdf250801052049.pdf', 'class_d1_audio250723083602.mp3', 'class_d_pdf250801052049.pdf', '', 1, '5 weeks', 'sample_a_audio250723083602.mp3', 'sample_b_audio250723083602.mp3', 'sample_c_audio250723083602.mp3', 'sample_d_audio250723083602.mp3', 'class_a2_audio250723083602.mp3', 'class_b2_audio250723083602.mp3', 'class_c2_audio250723083602.mp3', 'class_d2_audio250723083602.mp3');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `temp_user`
 --
 
@@ -562,7 +562,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`sl_id`, `image`, `fname`, `lname`, `phone`, `email`, `password`, `country`, `state`, `city`, `zip`, `address`, `landmark`, `valid`, `timestamp`, `referral_code`, `student`) VALUES
-(1, 'dummy-profile.png', 'Soham', 'Chatterjee', '9073228524', 'soham.brandit@gmail.com', '22122003', 'India', 'West Bengal', 'Kolkata', '700025', '50/5e, Harish Mukherjee Rd, Bhowanipore, Kolkata, West Bengal', '', 1, '2025-07-22 03:12:34', NULL, 1);
+(1, 'dummy-profile.png', 'Soham', 'Chatterjee', '9073228524', 'soham.brandit@gmail.com', '22122003', 'India', 'West Bengal', 'Kolkata', '700025', '50/5e, Harish Mukherjee Rd, Bhowanipore, Kolkata, West Bengal', '', 1, '2025-07-22 03:12:34', NULL, 1),
+(2, 'dummy-profile.png', 'Srinjay', 'Chatterjee', '9331010720', 'anindita.business@gmail.com', '14789632', NULL, NULL, NULL, NULL, NULL, NULL, 1, '2025-08-01 02:43:04', NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -696,12 +697,6 @@ ALTER TABLE `category`
   ADD PRIMARY KEY (`sl_id`);
 
 --
--- Indexes for table `classes`
---
-ALTER TABLE `classes`
-  ADD PRIMARY KEY (`sl_id`);
-
---
 -- Indexes for table `contact`
 --
 ALTER TABLE `contact`
@@ -787,6 +782,12 @@ ALTER TABLE `slider`
   ADD PRIMARY KEY (`sl_id`);
 
 --
+-- Indexes for table `student_section`
+--
+ALTER TABLE `student_section`
+  ADD PRIMARY KEY (`sl_id`);
+
+--
 -- Indexes for table `temp_user`
 --
 ALTER TABLE `temp_user`
@@ -831,12 +832,6 @@ ALTER TABLE `cart`
 --
 ALTER TABLE `category`
   MODIFY `sl_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
--- AUTO_INCREMENT for table `classes`
---
-ALTER TABLE `classes`
-  MODIFY `sl_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `contact`
@@ -917,6 +912,12 @@ ALTER TABLE `slider`
   MODIFY `sl_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `student_section`
+--
+ALTER TABLE `student_section`
+  MODIFY `sl_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `temp_user`
 --
 ALTER TABLE `temp_user`
@@ -926,7 +927,7 @@ ALTER TABLE `temp_user`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `sl_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `sl_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `visits`
