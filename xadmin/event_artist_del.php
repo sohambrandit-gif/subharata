@@ -6,8 +6,8 @@ if($sl_id!=''){
 	$res=mysqli_query($conn,$sql1);
 }
 if($res){	
-		header('location: events.php?success');
+		header('location: event_artist_del.php?success');
 }else{
-		header('location: events.php?error');
+		header('location: event_artist_del.php?error');
 }
 ?>

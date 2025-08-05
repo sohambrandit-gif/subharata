@@ -471,6 +471,15 @@ return $content;
 }
 ?>
 <?php
+function get_classes($sl_id ){
+global $conn;
+$qry=mysqli_query($conn,"SELECT * FROM `classes` WHERE `sl_id`='".$sl_id."'");
+$row=@mysqli_fetch_array($qry);
+$content=$row['title'];
+return $content;
+}
+?>
+<?php
 function get_prod($id,$col){
 global $conn;
 $qry=mysqli_query($conn,"SELECT * FROM `product` WHERE `sl_id`='".$id."'");

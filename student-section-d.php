@@ -12,7 +12,7 @@ if (!isset($_SESSION['login']) || $_SESSION['login'] == '' || !isset($_SESSION['
 }
 ?>
 <?php 
-    $sql12 = "SELECT class_d1_audio,class_d2_audio,class_d_pdf FROM classes";
+    $sql12 = "SELECT class_d1_audio,class_d2_audio,class_d_pdf FROM student_section";
     $res = mysqli_query($conn, $sql12);
     $row = mysqli_fetch_array($res);
 ?>
@@ -25,7 +25,7 @@ if (!isset($_SESSION['login']) || $_SESSION['login'] == '' || !isset($_SESSION['
         <div class="row">
             <div class="col-md-8">
                 <audio id="audio1" controls class="w-100 no-context-menu">
-                    <source src="<?php echo 'uploads/classes/class_audio/' . $row['class_d1_audio']; ?>" type="audio/mpeg">
+                    <source src="<?php echo 'uploads/student_section/class_audio/' . $row['class_d1_audio']; ?>" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
             </div>
@@ -41,7 +41,7 @@ if (!isset($_SESSION['login']) || $_SESSION['login'] == '' || !isset($_SESSION['
         <div class="row">
             <div class="col-md-8">
                 <audio id="audio2" controls class="w-100 no-context-menu">
-                    <source src="<?php echo 'uploads/classes/class_audio/' . $row['class_d2_audio']; ?>" type="audio/mpeg">
+                    <source src="<?php echo 'uploads/student_section/class_audio/' . $row['class_d2_audio']; ?>" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
             </div>
@@ -50,6 +50,8 @@ if (!isset($_SESSION['login']) || $_SESSION['login'] == '' || !isset($_SESSION['
             </div>
         </div>
     </div>
+
+    
     
     <!-- PDF Section -->
     <div class="pdf-container">
@@ -73,37 +75,23 @@ if (!isset($_SESSION['login']) || $_SESSION['login'] == '' || !isset($_SESSION['
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
 
 <style>
-    body {
-        background-color: #f5f5f5;
-        font-family: 'Hind Siliguri', 'Noto Sans Bengali', sans-serif;
-    }
-    .container {
-        max-width: 900px;
-        background-color: white;
-        border-radius: 10px;
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-        padding: 30px;
-        margin-top: 30px;
-        margin-bottom: 30px;
-    }
-    h1 {
-        color: #e74c3c;
-        font-weight: 700;
-        text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-    }
-    .audio-container, .pdf-container {
+    .audio-container,
+    .pdf-container {
         margin-bottom: 30px;
         padding: 20px;
         border-radius: 8px;
         background-color: #f8f9fa;
         border-left: 5px solid #e74c3c;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
     }
-    .audio-title, .pdf-title {
+
+    .audio-title,
+    .pdf-title {
         margin-bottom: 15px;
         color: #2980b9;
         font-weight: 600;
     }
+
     /* Disable right-click context menu */
     .no-context-menu {
         -webkit-user-select: none;
@@ -111,6 +99,7 @@ if (!isset($_SESSION['login']) || $_SESSION['login'] == '' || !isset($_SESSION['
         -ms-user-select: none;
         user-select: none;
     }
+
     /* Style for PDF viewer container */
     #pdf-viewer {
         width: 100%;
@@ -119,14 +108,17 @@ if (!isset($_SESSION['login']) || $_SESSION['login'] == '' || !isset($_SESSION['
         overflow: auto;
         background-color: #fff8e1;
     }
+
     .btn-secondary {
         background-color: #27ae60;
         border-color: #27ae60;
     }
+
     .btn-secondary:hover {
         background-color: #219653;
         border-color: #219653;
     }
+
     .text-muted {
         color: #7f8c8d !important;
     }
@@ -164,7 +156,7 @@ if (!isset($_SESSION['login']) || $_SESSION['login'] == '' || !isset($_SESSION['
     pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.worker.min.js';
     
     // Initialize PDF.js with your PHP file path
-    pdfjsLib.getDocument('<?php echo 'uploads/classes/class_pdf/' . $row['class_d_pdf']; ?>').promise.then(function(pdf) {
+    pdfjsLib.getDocument('<?php echo 'uploads/student_section/class_pdf/' . $row['class_d_pdf']; ?>').promise.then(function(pdf) {
         pdfDoc = pdf;
         document.getElementById('page-count').textContent = pdf.numPages;
         

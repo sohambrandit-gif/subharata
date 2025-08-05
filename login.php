@@ -23,8 +23,11 @@
 </head>
 
 <body>
-    <?php if(isset($_SESSION['login']) && $_SESSION['login']!= '' ){  redir('index.php');} ?>
-    <?php $code=$_GET['msg']; $_SESSION['return_url'] = $_GET['redirect']; ?>
+    <?php if (isset($_SESSION['login']) && $_SESSION['login'] != '') {
+        redir('index.php');
+    } ?>
+    <?php $code = $_GET['msg'];
+    $_SESSION['return_url'] = $_GET['redirect']; ?>
 
     <!-- preloader start -->
     <div id="loading">
@@ -33,8 +36,10 @@
                 <div class="bd-preloader-content">
                     <div class="bd-preloader-logo">
                         <div class="bd-preloader-circle">
-                            <svg width="190" height="190" viewBox="0 0 380 380" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle stroke="#F5F5F5" cx="190" cy="190" r="180" stroke-width="6" stroke-linecap="round">
+                            <svg width="190" height="190" viewBox="0 0 380 380" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle stroke="#F5F5F5" cx="190" cy="190" r="180" stroke-width="6"
+                                    stroke-linecap="round">
                                 </circle>
                                 <circle stroke="red" cx="190" cy="190" r="180" stroke-width="6" stroke-linecap="round">
                                 </circle>
@@ -56,7 +61,8 @@
         <section class="bd-authentication-cover-main ">
             <div class="row h100vh mx-0">
                 <div class="col-xxl-6 col-xl-5 col-lg-12 d-xl-block d-none px-0">
-                    <div class="bd-authentication-cover overflow-hidden" data-background="assets/images/contact/sign-in-bg.webp">
+                    <div class="bd-authentication-cover overflow-hidden"
+                        data-background="assets/images/contact/sign-in-bg.webp">
                         <div class="bd-authentication-cover-content d-flex-center d-none">
                             <div class="bd-section-title-wrapper">
                                 <h2 class="bd-section-title mb-20">Welcome Back!</h2>
@@ -73,6 +79,7 @@
                                 <div class="bd-authentication-form-logo">
                                     <a href="index.html"><img src="assets/images/logo/logo.svg" alt="logo"></a>
                                 </div>
+                                
                                 <h3 class="title mb-10">Sign In</h3>
                                 <p class="subtitle">Welcome back Wick</p>
                                 <form action="login_chk.php" method="post" class="form-login form-has-password">
@@ -81,7 +88,8 @@
                                             <label for="emailAddress">Email Address <span>*</span></label>
                                         </div>
                                         <div class="form-input">
-                                            <input name="email" id="emailAddress" type="email" placeholder="Email Address">
+                                            <input name="email" id="emailAddress" type="email"
+                                                placeholder="Email Address" value="<?php echo  $_COOKIE['user_email']; ?>">
                                         </div>
                                     </div>
                                     <div class="form-input-box mb-20">
@@ -89,24 +97,25 @@
                                             <label for="password">Password <span>*</span></label>
                                         </div>
                                         <div class="form-input">
-                                            <input name="password" id="password" type="password" placeholder="Your Password">
+                                            <input name="password" id="password" type="password"
+                                                placeholder="Your Password" value="<?php echo $_COOKIE['user_password']; ?>">
                                         </div>
                                     </div>
                                     <div class="d-flex-between mb-20">
                                         <div class="checkout-option">
-                                            <input id="rememberMe" type="checkbox" name="remember" value="1">
+                                            <input id="rememberMe" type="checkbox" name="remember" value="1" <?php if($_COOKIE['user_remember'] == '1'){ ?>checked="checked"<?php } ?>/>
                                             <label for="rememberMe">Remember me</label>
                                         </div>
                                         <div class="sign-forgot underline">
                                             <a href="forget-password.php" class="sign-link">Forgot Password?</a>
                                         </div>
                                     </div>
-                                    
-                                        <div class="bd-sign-btn">
-                                            <button type="submit" class="bd-btn btn-primary w-100" >Sign In</button>
-                                        </div>
-                                    
-                                    
+
+                                    <div class="bd-sign-btn">
+                                        <button type="submit" class="bd-btn btn-primary w-100">Sign In</button>
+                                    </div>
+
+
                                 </form>
                                 <div class="bd-divider-wrapper">
                                     <div class="bd-divider-line left-line"></div>

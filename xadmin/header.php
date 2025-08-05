@@ -3,7 +3,7 @@
 if (!isset($_SESSION['admin_login']) || $_SESSION['admin_login'] == '') {
   ?>
   <script>window.location = 'index.php?error'</script>
-<?php
+  <?php
 } ?>
 </head>
 
@@ -51,7 +51,8 @@ if (!isset($_SESSION['admin_login']) || $_SESSION['admin_login'] == '') {
         <div id="sidebar-menu" class="sidebar-menu">
           <ul>
             <li class="menu-title"> <span>Main</span> </li>
-            <li <?php if ($page == 'slider') { ?>class="active" <?php } ?>> <a href="slider.php"><i class="fe fe-home"></i>
+            <li <?php if ($page == 'slider') { ?>class="active" <?php } ?>> <a href="slider.php"><i
+                  class="fe fe-home"></i>
                 <span>Featured</span></a> </li>
 
             <li class="submenu <?php if ($page == 'order') { ?>active<?php } ?>"> <a href="javscript:void(0)"><i
@@ -97,8 +98,12 @@ if (!isset($_SESSION['admin_login']) || $_SESSION['admin_login'] == '') {
             <!-- <li <?php if ($page == 'certificate') { ?>class="active"<?php } ?>> <a href="certificate.php"><i class="fe fe-document"></i> <span>Coupons</span></a> </li> -->
             <li <?php if ($page == 'student_section') { ?>class="active" <?php } ?>> <a href="student_section.php"><i
                   class="fe fe-document"></i> <span>Student Section</span></a> </li>
+            <li <?php if ($page == 'classes') { ?>class="active" <?php } ?>> <a href="classes.php"><i
+                  class="fe fe-document"></i> <span>Classes</span></a> </li>
             <li <?php if ($page == 'events') { ?>class="active" <?php } ?>> <a href="events.php"><i
                   class="fe fe-document"></i> <span>Events</span></a> </li>
+            <li <?php if ($page == 'sample_audios') { ?>class="active" <?php } ?>> <a href="sample_audios.php"><i
+                  class="fe fe-document"></i> <span>Audios</span></a> </li>
             <!-- <li <?php if ($page == 'event_location') { ?>class="active"<?php } ?>> <a href="event_location.php"><i class="fe fe-document"></i> <span>Event Location</span></a> </li> -->
             <?php ?>
             <li class="submenu <?php if ($page == 'blog' || $page == 'add_blog') { ?>active<?php } ?>"> <a
